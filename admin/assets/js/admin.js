@@ -6,6 +6,9 @@ jQuery(document).ready(function( $ ) {
 	$( ".layout .layout .acf-fc-layout-handle" ).live( "click", function() {
 		$(this).parent().before( "<div class='acf-layout-modal-clickmask'></div>" );
 		$(this).parent().addClass('openModal');
+		$('.CodeMirror').each(function(i, el){
+	            el.CodeMirror.refresh();
+	        });
 	});
 
 	$( ".acf-layout-modal-clickmask" ).live( "click", function() {
